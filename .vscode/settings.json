@@ -1,0 +1,9 @@
+{
+    "python.languageServer": "Pylance",
+    "python.linting.pep8Enabled": true,
+    "python.linting.pylintEnabled": true,
+    "emmet.includeLanguages": {
+        "django-html": "html",
+        "jinja-html": "html"
+    }
+}

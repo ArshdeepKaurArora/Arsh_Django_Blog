@@ -1,0 +1,65 @@
+.heading h2, .heading p{
+    color: white;
+    text-align: center;
+}
+
+.heading{
+    background-image: url('/static/blog/images/karsten-wurth-h66Vlx8MHmo-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 35rem;
+    padding: 0%;
+    margin: auto;
+}
+
+h3{
+    color: #895c6f;
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+    text-decoration: 3px underline rgb(170, 147, 147);
+}
+
+.post_list ul{
+    list-style: none;
+    margin: 3rem auto;
+    position: relative;
+    margin-top: 4.5rem;
+    margin-left: 7rem;
+    padding-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3,18rem); /*change this*/
+    grid-gap: 5%;
+    text-align: justify;
+}
+
+.heading h2{
+    font-size: 4.5rem;
+    margin-top: 9rem;
+    margin-bottom: 0%;
+}
+
+.heading p{
+    font-size: 1.5rem;
+    margin-top: 0%;
+}
+
+.post_list ul li:hover,
+.post_list ul li:active{
+    background-color: #fcfcfc;
+}
+
+.post_list ul li{
+    width: 100%;
+    box-shadow: 0 2px 8px #895c6f;
+    border-radius: 20px;
+    background-color: rgba(254, 219, 219, 0.897);
+    height: 97%;
+    border-right: 5px solid #895c6f;
+    padding-top: 5px;
+}
+
+
+/* background-color: #3AA6B9; */

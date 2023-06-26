@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+My Blog
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'blog/include/header.css' %}">
+<link rel="stylesheet" href="{% static 'blog/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<section id="heading">
+    {% include 'blog/include/header.html' %}
+    <div id="question">
+    <h2>About me</h2>
+    <p>What do I do?</p>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+section {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 35rem;
+    padding: 0%;
+    text-align: center;
+}
+
+section h2{
+    font-size: 6rem;
+    margin: auto;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+}
+
+main{
+    position: relative;
+    text-align: justify;
+}
+
+section{
+    color: white;
+}
+
+section address{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+main{
+    text-align: justify;
+    margin: 4rem 18rem 3rem 18rem;
+}
+

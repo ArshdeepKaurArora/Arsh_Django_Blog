@@ -1,0 +1,27 @@
+#heading{
+    background-image: url('/static/blog/images/garrett-parker-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 35rem;
+    padding: 0%;
+    margin: auto;
+}
+
+#question{
+    color: white;
+    text-align: center;
+}
+
+h2{
+    font-size: 5rem;
+    margin: auto;
+    padding-top: 10rem;
+}
+
+#question p{
+    font-size: 2rem;
+    font-weight: normal;
+    margin: auto;
+}
