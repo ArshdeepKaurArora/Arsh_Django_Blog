@@ -11,11 +11,16 @@ Complete post
 {% endblock %}
 
 {% block content %}
-<section class='heading' style="background-image: url({{'/static/'|add:post.image}})">
+<section class='heading' style="background-image: url({{'/static/'|add:post.image_name}})">
     {% include 'blog/include/header.html' %}
     <h2>{{ post.title }}</h2>
+    <div>
+        {% for tag in post_tags %}
+        <span class='tags'>{{tag}}</span>
+        {% endfor %}
+    </div>
     <article>
-    <address>By {{ post.author }}</address>
+    <address>By <a href="mailto:{{ post.author.email }}">{{ post.author }}</a></address>
     <div>
         Last updated
         <time>

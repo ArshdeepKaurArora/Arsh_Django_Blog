@@ -10,10 +10,19 @@ section {
 }
 
 section h2{
-    font-size: 6rem;
+    font-size: 4rem;
     margin: auto;
     padding-top: 6rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.tags{
+    padding: 0.5rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-weight: bold;
 }
 
 main{
@@ -27,11 +36,23 @@ section{
 
 section address{
     font-size: 1.5rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
+}
+
+section a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+section a:hover,
+section a:active{
+    color: blue
 }
 
 main{
     text-align: justify;
-    margin: 4rem 18rem 3rem 18rem;
+    margin: 4rem 16rem 3rem 16rem;
 }
 
