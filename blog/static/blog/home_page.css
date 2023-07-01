@@ -27,17 +27,30 @@ h3{
     margin: 3rem auto;
     position: relative;
     margin-top: 4.5rem;
-    margin-left: 7rem;
     padding-top: 0.5rem;
     display: grid;
-    grid-template-columns: repeat(3,18rem); /*change this*/
     grid-gap: 5%;
     text-align: justify;
+    padding-right: 2rem;
+}
+
+@media only screen
+  and (max-width: 799px) {
+    .post_list ul {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen
+  and (min-width: 800px) {
+    .post_list ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .heading h2{
     font-size: 4.5rem;
-    margin-top: 9rem;
+    margin-top: 11rem;
     margin-bottom: 0%;
 }
 
@@ -59,6 +72,7 @@ h3{
     height: 97%;
     border-right: 5px solid #895c6f;
     padding-top: 5px;
+    margin: auto;
 }
 
 

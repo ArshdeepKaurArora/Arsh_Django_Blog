@@ -11,8 +11,14 @@ Complete post
 {% endblock %}
 
 {% block content %}
-<section class='heading' style="background-image: url({{'/static/'|add:post.image_name}})">
+<section class='heading' style="background-image: url({{post.image_name.url}})">
     {% include 'blog/include/header.html' %}
+    {% if comment_form.errors %}
+<diV class="errors">
+    <h2>Error!</h2>
+    <p>Please fix all errors on the following <a href="#comment-box">comment form</a>.</p>
+</div>
+{% endif %}
     <h2>{{ post.title }}</h2>
     <div>
         {% for tag in post_tags %}
@@ -33,4 +39,31 @@ Complete post
 <main>
     <p>{{ post.content|linebreaks }}</p>
 </main>
+
+<div class="comments">
+    <h2>Comments</h2>
+    <ul>
+        {% for comment in comments %}
+        <li><h3>{{comment.name}}</h3>
+            {{comment.text|linebreaks}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    <form action="{% url 'post_detail' post.slug %}" id="comment-box" method="POST">
+        {% csrf_token %}
+        <h3>Comment Box</h3>
+        {% for form_field in comment_form %}
+            <div class="comment-form {% if form_field.errors %} invalid {% endif %}">
+                {{ form_field.label_tag }}
+                {{ form_field }}
+                {{ form_field.errors }}
+            </div>
+        {% endfor %}
+        <button>Submit</button>
+    </form>
+</div>
+
 {% endblock %}
