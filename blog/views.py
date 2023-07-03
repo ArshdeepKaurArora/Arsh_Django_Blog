@@ -62,3 +62,33 @@ class PostdetailView(View):
             "comments": post.comments.all().order_by('-id')
         }
         return render(request, "blog/post_detail.html", context)
+    
+class ReadlaterView(View):
+    """Return all posts collected in Readlater list"""
+    def get(self, request):
+        read_later_posts = request.session.get("read_later_posts")
+        if not read_later_posts is None and len(read_later_posts) != 0:
+            posts = Post.objects.filter(id__in=read_later_posts)
+            context = {
+                "posts": posts,
+                "not_null": True
+            }
+        else:
+            context = {
+                "not_null": False
+            }
+        return render(request, "blog/read_later.html", context)
+
+    def post(self, request):
+        read_later_posts = request.session.get("read_later_posts")
+
+        if read_later_posts is None:
+            read_later_posts = []
+
+        post_id = int(request.POST["post_id"])
+        read_later_posts.append(post_id)
+        request.session["read_later_posts"] = read_later_posts
+        print(read_later_posts)
+        print(request.session)
+        redirect_path = reverse("read_later")
+        return HttpResponseRedirect(redirect_path)

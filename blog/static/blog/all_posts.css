@@ -7,26 +7,49 @@
     height: 35rem;
     padding: 0%;
     margin: auto;
+    text-align: center;
 }
 
 .post_list ul{
     list-style: none;
     margin: 3rem auto;
-    position: absolute;
-    top: 80%;
-    left: 10%;
+    position: relative;
+    margin: 4.0rem auto;
+    width: 90%;
+    max-width: 80%;
+    padding: 0.5rem auto;
     display: grid;
-    grid-template-columns: repeat(3,18rem); /*change this*/
     grid-gap: 5%;
-    text-align: justify;
+    padding-right: 2rem;
+}
+
+@media only screen
+  and (max-width: 799px) {
+    .post_list ul {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen
+  and (min-width: 800px) {
+    .post_list ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .heading h2{
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
     font-weight: bold;
-    text-align: center;
-    padding: 7rem;
+    margin: auto;
+    margin-top: 9rem;
+    padding: auto;
+}
+
+.heading h3{
+    color: white;
+    margin: auto;
+    margin-top: 1rem;    
 }
 
 .post_list ul li:hover,

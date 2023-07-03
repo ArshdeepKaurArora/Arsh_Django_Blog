@@ -36,6 +36,14 @@ Complete post
     </article>
 </section>
 
+<div class="read-later">
+    <form action="{% url "read_later" %}" method="POST">
+        {% csrf_token %}
+        <input type="hidden" value={{ post.id }} name="post_id">
+    <h2>Want to read another time? <button><b>Read Later</b></button></h2>
+    </form>
+</div>
+
 <main>
     <p>{{ post.content|linebreaks }}</p>
 </main>

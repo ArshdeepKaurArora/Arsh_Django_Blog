@@ -1,5 +1,18 @@
+{% load static %}
+
 <header>
     <nav>
-        <a href="{% url 'home_page' %}">Travel Blog</a>
+        <a href="{% url 'home_page' %}"><img src="{% static "blog/images/logo.jpg" %}" alt="logo" class="logo"></a>
+        <label class="hamburgericon">
+            <input type="checkbox">
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'read_later' %}">Read Later</a></li>
+                <li><a href="{% url 'all_posts' %}">All posts</a></li>
+                <li><a href="{% url 'home_page' %}">Home</a></li>
+            </ul>
+        </div>
     </nav>
 </header>

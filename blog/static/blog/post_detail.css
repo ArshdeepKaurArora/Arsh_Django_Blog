@@ -30,8 +30,8 @@ main{
     align-items: center;
     position: relative;
     text-align: justify;
-    margin: 4rem auto;
-    padding: 0 3rem;
+    margin: 2rem auto;
+    padding: 0 5rem;
     font-size: medium;
 }
 
@@ -190,4 +190,33 @@ section a:active{
 
 .comments li h3{
     color:#895c6f;
+}
+
+.read-later{
+    margin: 1rem auto;
+    overflow: auto;
+    padding: 0 5rem;
+}
+
+.read-later h2{
+    float: right;
+    color: #5c3d4a;
+    font-style: inherit;
+    font-size: large;
+}
+
+.read-later button{
+    width: 6rem;
+    height: 2.5rem;
+    font-size:small;
+    border-radius: 18px;
+    background-color: rgba(254, 219, 219, 0.637);
+    border-color: #895c6f;
+    cursor: pointer;
+}
+
+.read-later button:hover,
+.read-later button:active{
+    background-color: #895c6f;
+    color: white;
 }
