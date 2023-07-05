@@ -1,0 +1,29 @@
+footer{
+    text-align: center;
+    padding: 0;
+    background-color: rgba(221, 191, 191, 0.938);
+    margin: 0;
+}
+
+footer div{
+    margin-bottom: 1rem;
+}
+
+.fab{
+    padding-top: 1rem;
+    font-size: 48px;
+    margin: 1rem;
+    color: rgb(72, 71, 71)
+}
+
+.fab:hover,
+.fab:active{
+    color: rgba(161, 93, 93, 0.897);
+}
+
+footer p{
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+

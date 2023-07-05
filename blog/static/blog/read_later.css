@@ -1,5 +1,5 @@
 .heading{
-    background-image: url('/static/blog/images/jonny-mckenna-unsplash.jpg');
+    background-image: url('/static/blog/images/read_later.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -21,6 +21,7 @@
     display: grid;
     grid-gap: 5%;
     padding-right: 2rem;
+    margin-bottom: 10rem;
 }
 
 .heading h2{
@@ -28,8 +29,9 @@
     color: white;
     font-weight: bold;
     margin: auto;
-    margin-top: 9rem;
+    margin-top: 0;
     padding: auto;
+    padding-top: 12rem;
 }
 
 .heading h3{

@@ -6,14 +6,12 @@ Read Later
 {% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'blog/include/header.css' %}">
 <link rel="stylesheet" href="{% static 'blog/read_later.css' %}">
 <link rel="stylesheet" href="{% static 'blog/include/post.css' %}">
 {% endblock %}
 
 {% block content %}
     <div class='heading'>
-        {% include 'blog/include/header.html' %}
         {% if not_null %}
         <h2>Your Reading List</h2>
         <h3>Read at your pace</h3>
@@ -26,7 +24,7 @@ Read Later
         </ul>
     </div>
         {% else %}
-        <h2 style="font: 2rem italic;padding-top: 10rem">You haven't saved any post for reading later.</h2>
+        <h2 style="font: 2rem bold;padding-top: 10rem">You haven't saved any post for reading later.</h2>
     </div>
         {% endif %}
 {% endblock %}

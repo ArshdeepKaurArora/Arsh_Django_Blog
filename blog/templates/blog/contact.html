@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contact
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'blog/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<section id="heading">
+    <div id="question">
+    <h2>Contact Me</h2>
+    <p>Looking forward to connect?</p>
+    </div>
+</section>
+
+<div class="contact">
+    <h3>Want to get in touch?</h3>
+    <div class="info">
+    <p>Hey, thanks for approaching and showing your interesting of connecting with me. 
+        I am more than happy to connect with you. I am open to suggestions for improving this blog 
+        and enhancing my skills.</p>
+      <p> If you are approaching with any advice or any job opportunity please click on the button below to contact with me.</p>
+    </div>
+      <div class="email">
+        <button type="button" onclick="location.href='mailto:kaurarshdeep0103@gmail.com';">
+          Drop an email</button>
+      </div>
+</div>
+
+{% endblock %}

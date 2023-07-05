@@ -1,17 +1,18 @@
 .heading h2, .heading p{
     color: white;
     text-align: center;
+    font-weight: bold;
 }
 
 .heading{
-    background-image: url('/static/blog/images/karsten-wurth-h66Vlx8MHmo-unsplash.jpg');
+    background-image: url('/static/blog/images/home.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 100%;
     height: 35rem;
     padding: 0%;
-    margin: auto;
+    margin: 0;
 }
 
 h3{
@@ -27,6 +28,7 @@ h3{
     margin: 3rem auto;
     position: relative;
     margin-top: 4.5rem;
+    margin-bottom: 10rem;
     padding-top: 0.5rem;
     display: grid;
     grid-gap: 5%;
@@ -39,6 +41,14 @@ h3{
     .post_list ul {
       grid-template-columns: repeat(1, 1fr);
     }
+    .heading h2{
+        font-size: 1rem;
+        padding-top: 16rem;
+    }
+
+    .heading p{
+        font-size: 0.3rem;
+    }
 }
 
 @media only screen
@@ -46,16 +56,24 @@ h3{
     .post_list ul {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .heading h2{
+        font-size: 3rem;
+        padding-top: 15rem;
+    }
+
+    .heading p{
+        font-size: 1.5rem;
+    }
 }
 
 .heading h2{
-    font-size: 4.5rem;
-    margin-top: 11rem;
-    margin-bottom: 0%;
+    margin: auto;
+    margin-top: 0;
+    padding: auto;
 }
 
 .heading p{
-    font-size: 1.5rem;
     margin-top: 0%;
 }
 

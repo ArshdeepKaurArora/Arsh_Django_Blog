@@ -6,14 +6,12 @@ My Blog
 {% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'blog/include/header.css' %}">
 <link rel="stylesheet" href="{% static 'blog/home_page.css' %}">
 <link rel="stylesheet" href="{% static 'blog/include/post.css' %}">
 {% endblock %}
 
 {% block content %}
 <div class="heading">
-    {% include 'blog/include/header.html' %}
     <h2>Arsh's Blog</h2>
     <p>Welcome to my blog!</p>
 </div>

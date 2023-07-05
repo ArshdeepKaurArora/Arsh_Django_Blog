@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+from os import getenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-vi_-el#vvulf(xxxje$*dygb%wd5o6%+=(0wp%1!#jnda*s(jb'
+SECRET_KEY = getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = getenv("IS_DEVELOPMENT", True)
 
 ALLOWED_HOSTS = []
 
@@ -115,7 +116,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+STATIC_ROOT= BASE_DIR / "staticfiles"
 STATIC_URL = 'static/'
 
 # Default primary key field type

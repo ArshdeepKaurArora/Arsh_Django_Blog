@@ -38,12 +38,16 @@ class PostdetailView(View):
     """Return a page with particular post in detail."""
     def get(self,request,slug):
         post = Post.objects.get(slug=slug)
+        read_later_posts = request.session.get("read_later_posts")
         context = {
             "post": post,
             "post_tags": post.tags.all(),
             "comment_form": CommentForm(),
-            "comments": post.comments.all().order_by("-id")
+            "comments": post.comments.all().order_by("-id"),
+            "read_later": True,
         }
+        if post.id in read_later_posts:
+            context['read_later'] = False
         return render(request,"blog/post_detail.html",context)
     
     def post(self,request,slug):
@@ -86,9 +90,15 @@ class ReadlaterView(View):
             read_later_posts = []
 
         post_id = int(request.POST["post_id"])
-        read_later_posts.append(post_id)
+        if post_id not in read_later_posts:
+            read_later_posts.append(post_id)
+        else:
+            read_later_posts.remove(post_id)
         request.session["read_later_posts"] = read_later_posts
-        print(read_later_posts)
-        print(request.session)
         redirect_path = reverse("read_later")
         return HttpResponseRedirect(redirect_path)
+
+class ContactView(View):
+    """Return contact page on blog"""
+    def get(self,request):
+        return render(request, "blog/contact.html")

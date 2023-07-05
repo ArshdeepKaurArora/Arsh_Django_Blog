@@ -11,10 +11,18 @@ section{
 }
 
 section h2{
-    font-size: 4rem;
+    font-size: 3rem;
     margin: auto;
-    padding-top: 6rem;
+    margin-top: 0;
+    padding-top: 14rem;
     padding-bottom: 1rem;
+}
+
+@media only screen
+and (max-width: 800px) {
+    section h2{
+        font-size: 2rem;
+    }
 }
 
 .tags{
@@ -100,8 +108,8 @@ section a:active{
     width: 8rem;
     height: 3rem;
     border-radius: 1rem;  
-    background-color: #895c6f; 
-    border-color: #895c6f;
+    background-color: rgba(161, 93, 93, 0.897); 
+    border-color: rgba(161, 93, 93, 0.897);
     color: white;
     cursor: pointer;
     box-shadow: #35242b;
@@ -111,8 +119,8 @@ section a:active{
 
 #comment-box button:hover,
 #comment-box button:active{
-    background-color: #a36e84;
-    border-color: #a36e84;
+    background-color: rgba(189, 121, 121, 0.897);
+    border-color: rgba(189, 121, 121, 0.897);
 }
 
 .errorlist{
@@ -210,13 +218,14 @@ section a:active{
     height: 2.5rem;
     font-size:small;
     border-radius: 18px;
-    background-color: rgba(254, 219, 219, 0.637);
-    border-color: #895c6f;
+    background-color: rgba(161, 93, 93, 0.897); 
+    border-color: rgba(161, 93, 93, 0.897);
+    color: white;
     cursor: pointer;
 }
 
 .read-later button:hover,
 .read-later button:active{
-    background-color: #895c6f;
-    color: white;
+    background-color: rgba(189, 121, 121, 0.897);
+    border-color: rgba(189, 121, 121, 0.897);
 }
