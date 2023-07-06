@@ -25,7 +25,6 @@ h2{
 #question p{
     font-size: 1.5rem;
     font-weight: normal;
-    margin: auto;
     padding-top: 1rem;
 }
 
@@ -37,6 +36,7 @@ h2{
 
 .row .about, .row img{
     padding: 2rem;
+    margin: 0;
 }
 
 .row .about{
@@ -50,18 +50,18 @@ h2{
 }
 
 @media only screen
-  and (min-width: 1000px) {
+  and (min-width: 800px) {
     .row{
         display: flex;
+        padding-left: 7rem;
     }
 
     .row .about{
-        padding-left: 5rem;
+        max-width: 50%;
     }
 
-    .row img{
-        padding-right: 5rem;
-        width: 38rem;
-        height: 34rem
-    }
+    .row .image{
+        max-width: 50%;
+    } 
+
   }
