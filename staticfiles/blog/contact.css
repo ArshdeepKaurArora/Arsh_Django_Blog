@@ -1,0 +1,74 @@
+#heading{
+    background-image: url('/static/blog/images/contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 35rem;
+    padding: 0%;
+    margin: auto;
+}
+
+#question{
+    color: white;
+    text-align: center;
+}
+
+h2{
+    font-size: 3rem;
+    margin: auto;
+    margin-top: 0;
+    padding: auto;
+    padding-top: 12rem;
+}
+
+#question p{
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: auto;
+    padding-top: 1rem;
+}
+
+.contact{
+    padding: 0;
+    margin: 0 10%;
+    width: 90%;
+    max-width: 80%;
+    text-align: center;
+}
+
+.contact h3{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 2rem;
+}
+
+.contact .info{
+    font-size: large;
+    padding: 0.5rem;
+    width: 90%;
+    max-width: 80%;
+    margin-left: 10%;
+    text-align: justify;
+}
+
+.contact button{
+    border-radius: 1rem;  
+    background-color: rgba(161, 93, 93, 0.897); 
+    border-color: rgba(161, 93, 93, 0.897);
+    color: white;
+    cursor: pointer;
+    box-shadow: #35242b;
+    font-weight: bolder;
+    font-size: large;
+    box-shadow: 0 4px 8px #35242b;
+    width: 14rem;
+    height: 4rem;
+    margin-bottom: 5rem;
+}
+
+.contact button:hover,
+.contact button:active{
+    background-color: rgba(189, 121, 121, 0.897);
+    border-color: rgba(189, 121, 121, 0.897);
+}

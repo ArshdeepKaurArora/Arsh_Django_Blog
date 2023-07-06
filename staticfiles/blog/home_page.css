@@ -1,0 +1,97 @@
+.heading h2, .heading p{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.heading{
+    background-image: url('/static/blog/images/home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 35rem;
+    padding: 0%;
+    margin: 0;
+}
+
+h3{
+    color: #895c6f;
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+    text-decoration: 3px underline rgb(170, 147, 147);
+}
+
+.post_list ul{
+    list-style: none;
+    margin: 3rem auto;
+    position: relative;
+    margin-top: 4.5rem;
+    margin-bottom: 10rem;
+    padding-top: 0.5rem;
+    display: grid;
+    grid-gap: 5%;
+    text-align: justify;
+    padding-right: 2rem;
+}
+
+@media only screen
+  and (max-width: 799px) {
+    .post_list ul {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .heading h2{
+        font-size: 1rem;
+        padding-top: 16rem;
+    }
+
+    .heading p{
+        font-size: 0.3rem;
+    }
+}
+
+@media only screen
+  and (min-width: 800px) {
+    .post_list ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .heading h2{
+        font-size: 3rem;
+        padding-top: 15rem;
+    }
+
+    .heading p{
+        font-size: 1.5rem;
+    }
+}
+
+.heading h2{
+    margin: auto;
+    margin-top: 0;
+    padding: auto;
+}
+
+.heading p{
+    margin-top: 0%;
+}
+
+.post_list ul li:hover,
+.post_list ul li:active{
+    background-color: #fcfcfc;
+}
+
+.post_list ul li{
+    width: 100%;
+    box-shadow: 0 2px 8px #895c6f;
+    border-radius: 20px;
+    background-color: rgba(254, 219, 219, 0.897);
+    height: 97%;
+    border-right: 5px solid #895c6f;
+    padding-top: 5px;
+    margin: auto;
+}
+
+
+/* background-color: #3AA6B9; */

@@ -1,0 +1,26 @@
+li a img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: white solid;
+}
+
+li a h2{
+    font-size: 1.5rem;
+    color: black;
+    text-align: left;
+}
+
+li a p{
+    font-size: 1rem;
+    color: black;
+}
+
+li a{
+    text-decoration: none;
+}
+
+.post{
+    padding: 10px 15px 20px 10px;
+    text-align: justify;
+}
