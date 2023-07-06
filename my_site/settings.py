@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-vi_-el#vvulf(xxxje$*dygb%wd5o6%+=(0wp%1!#jnda*s(jb"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("IS_DEVELOPMENT",True)
 
 ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', '.now.sh', 'localhost']
 
@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'my_site.wsgi.app'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'g20yl1EMx0wMM197LOnx',
-        'HOST': 'containers-us-west-1.railway.app',
-        'PORT': '8051'
+        'NAME': os.getenv("POSTNAME"),
+        'USER': os.getenv("POSTUSER"),
+        'PASSWORD': os.getenv("POSTPASSWORD"),
+        'HOST': os.getenv("POSTHOST"),
+        'PORT': os.getenv("POSTPORT")
     }
 }
 
