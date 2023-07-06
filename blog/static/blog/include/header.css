@@ -20,11 +20,14 @@ nav{
 }
 
 .logo{
+    text-decoration: none;
     margin-top: 0.3rem;
     margin-left: 1rem;
+    font-weight: bold;
     padding: 1rem;
     float: left;
     border-radius: 30%;
+    color: white;
     cursor: pointer;
     background-color: rgba(161, 93, 93, 0.897); 
     border-color: rgba(161, 93, 93, 0.897);
@@ -96,7 +99,7 @@ nav .logo:active{
         border-left: 0.2rem solid black;
     }
     
-    header nav a{
+    header nav li a{
         text-decoration: none;
         color: white;
         font-weight: bold;
