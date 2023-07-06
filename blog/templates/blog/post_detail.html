@@ -63,7 +63,7 @@ Complete post
     <h2>Comments</h2>
     <ul>
         {% for comment in comments %}
-        <li><h3>{{comment.name}}</h3>
+        <li><h3 initials="{{comment.initials}}" style="--random-color:{{comment.color}}">{{comment.name}}</h3>
             {{comment.text|linebreaks}}
         </li>
         {% endfor %}

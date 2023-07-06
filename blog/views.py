@@ -6,6 +6,8 @@ from django.views import View
 from .forms import CommentForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from random import randint
+
 
 def get_date(post):
     """To get the date of post"""
@@ -36,18 +38,32 @@ class AboutView(TemplateView):
 
 class PostdetailView(View):
     """Return a page with particular post in detail."""
+    def initials(self, comment):
+        name_splits = comment.name.split()
+        initials = ""
+        for split in name_splits:
+            initials += split[0].upper()
+        return initials
+    
+    def random_color(self):
+        color = f"rgb{randint(0,255),randint(0,255),randint(0,255)}"
+        return color
+
     def get(self,request,slug):
         post = Post.objects.get(slug=slug)
         read_later_posts = request.session.get("read_later_posts")
+        comments= post.comments.all().order_by("-id")
+        print(self.random_color())
         context = {
             "post": post,
             "post_tags": post.tags.all(),
             "comment_form": CommentForm(),
-            "comments": post.comments.all().order_by("-id"),
+            "comments": comments,
             "read_later": True,
         }
-        if post.id in read_later_posts:
-            context['read_later'] = False
+        if read_later_posts:
+            if post.id in read_later_posts:
+                context['read_later'] = False
         return render(request,"blog/post_detail.html",context)
     
     def post(self,request,slug):
@@ -56,14 +72,17 @@ class PostdetailView(View):
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.post = post
+            comment.initials = self.initials(comment)
+            comment.color = self.random_color()
             comment.save()
             redirect_path = reverse("post_detail", args=[slug])
             return HttpResponseRedirect(redirect_path)
+        comments = post.comments.all().order_by('-id')
         context = {
             "post": post,
             "post_tags": post.tags.all(),
             "comment_form": comment_form,
-            "comments": post.comments.all().order_by('-id')
+            "comments": comments,
         }
         return render(request, "blog/post_detail.html", context)
     

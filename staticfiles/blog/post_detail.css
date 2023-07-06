@@ -94,11 +94,11 @@ section a:active{
 .comment-form input, 
 .comment-form textarea{
     text-decoration: none;
+    width: auto;
     border-radius: 10px;
     border-width: 2px;
     font: inherit;
     display: block;
-    padding-top: 0.75rem;
     border-color: rgba(161, 140, 140, 0.363);
 }
 
@@ -198,6 +198,21 @@ section a:active{
 
 .comments li h3{
     color:#895c6f;
+}
+
+[initials]:before{
+    content:attr(initials);
+    display:inline-block;
+    font-size:1em;
+    width:2.5em;
+    height:2.5em;
+    line-height:2.5em;
+    text-align:center;
+    border-radius:50%;
+    background-color: var(--random-color);
+    vertical-align:middle;
+    margin-right:1em;
+    color:white;
 }
 
 .read-later{

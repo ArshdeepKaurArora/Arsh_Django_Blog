@@ -44,3 +44,5 @@ class Comment(models.Model):
     email = models.EmailField(max_length=254)
     text = models.TextField(max_length=400)
     post = models.ForeignKey("Post", on_delete=models.CASCADE, related_name="comments")
+    initials = models.CharField(max_length=5,null=True)
+    color = models.CharField(max_length=50,null=True)
