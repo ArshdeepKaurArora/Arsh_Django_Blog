@@ -133,9 +133,9 @@ and (max-width: 800px) {
 
 .sidebar li{
     list-style: none;
-    background-color: #7a616be4;
     font-size: medium;
     font-weight: bold;
+    background-color: #7a616be4;
     padding: 0.5rem;
     padding-right: 3rem;
     padding-left: 3rem;
@@ -144,6 +144,7 @@ and (max-width: 800px) {
 
 .sidebar li a{
     color: white;
+    padding: 0.5rem;
 }
 
 .hamburgericon:has(input:checked) + .sidebar{
