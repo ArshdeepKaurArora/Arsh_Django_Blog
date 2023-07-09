@@ -9,7 +9,7 @@ I have maintained the simplicity and legibility of the program.
 
 + The HTML codes for the structure of the website are inside the [blog/templates/blog](https://github.com/ArshdeepKaurArora/Arsh_Django_Blog/tree/main/blog/templates/blog) file.
 + The CSS codes and images for the designs of the website are inside the [staticfiles](https://github.com/ArshdeepKaurArora/Arsh_Django_Blog/tree/main/staticfiles) file.
-+ 
++ The Python code for the API calls and the conditions are inside the [blog/views.py](https://github.com/ArshdeepKaurArora/Arsh_Django_Blog/blob/main/blog/views.py) file.
 
 ## Photos used from Unsplash
 
