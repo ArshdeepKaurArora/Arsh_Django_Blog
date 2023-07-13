@@ -7,11 +7,6 @@ header{
     padding: 0;
 }
 
-.sidebar a:hover,
-.sidebar a:active{
-    color: black;
-}
-
 nav{
     display: inline;
     overflow: hidden;
@@ -147,6 +142,11 @@ and (max-width: 800px) {
     padding: 0.5rem;
     padding-right: 3rem;
     padding-left: 3rem;
+}
+
+.sidebar a:hover,
+.sidebar a:active{
+    color: black;
 }
 
 .hamburgericon:has(input:checked) + .sidebar{
