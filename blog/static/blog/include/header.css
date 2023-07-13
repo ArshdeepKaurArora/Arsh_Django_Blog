@@ -149,9 +149,9 @@ and (max-width: 800px) {
     color: black;
 }
 
-/* .hamburgericon:has(input:checked) + .sidebar{
+.hamburgericon:has(input:checked) + .sidebar{
         translate: 0;
     }
-} */
+}
 
 /* background-color: #3AA6B9 */
