@@ -2,7 +2,6 @@
 header{
     width: 100%;
     height: 4rem;
-    background-color: rgba(98, 61, 61, 0.961);
     margin: 0;
     padding: 0;
 }
@@ -16,7 +15,7 @@ nav{
 
 .logo{
     text-decoration: none;
-    margin-top: 0.3rem;
+    margin-top: 0.2rem;
     margin-left: 1rem;
     font-weight: bold;
     padding: 1rem;
@@ -25,12 +24,12 @@ nav{
     color: white;
     cursor: pointer;
     background-color: rgba(161, 93, 93, 0.897); 
-    border-color: rgba(161, 93, 93, 0.897);
+    border: solid rgb(255, 238, 238);
 }
 
 nav .logo:hover,
 nav .logo:active{
-    box-shadow: 0 4px 8px black;
+    box-shadow: 0 4px 8px rgb(255, 238, 238);
     padding: 1.05rem;
     font-size: large;
 }
@@ -39,7 +38,6 @@ nav .logo:active{
     --bar-width: 60px;
     --bar-height: 8px;
     --hamburger-gap: 6px;
-    --background: white;
     --foreground: #333;
     --hamburger-height: calc(var(var(--bar-height))*3)+var(var(--hamburger-gap))+1rem;
     --hamburger-margin: 1rem;
@@ -102,6 +100,11 @@ nav .logo:active{
         padding-left: 1rem;
     }
 
+    header nav li a:hover,
+    header nav li a:active{
+        text-decoration: underline;
+    }
+
     .hamburgericon{
         display: none;
     }
@@ -152,6 +155,10 @@ and (max-width: 800px) {
 .hamburgericon:has(input:checked) + .sidebar{
         translate: 0;
     }
+}
+
+header{
+    background-color: rgba(116, 71, 71, 0.696);
 }
 
 
