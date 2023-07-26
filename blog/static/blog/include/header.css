@@ -15,22 +15,22 @@ nav{
 
 .logo{
     text-decoration: none;
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
     margin-left: 1rem;
     font-weight: bold;
-    padding: 1rem;
+    padding: 0.8rem;
     float: left;
-    border-radius: 30%;
+    border-radius: 25%;
     color: white;
     cursor: pointer;
     background-color: rgba(161, 93, 93, 0.897); 
-    border: solid rgb(255, 238, 238);
+    box-shadow: 0 1px 2px rgb(255, 238, 238);
 }
 
 nav .logo:hover,
 nav .logo:active{
-    box-shadow: 0 4px 8px rgb(255, 238, 238);
-    padding: 1.05rem;
+    box-shadow: 0 2px 4px rgb(255, 238, 238);
+    padding: 0.81rem;
     font-size: large;
 }
 
